@@ -1,13 +1,13 @@
 import React from "react";
 import { Clock, Wrench, Smartphone, Coffee } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import FloatingIcons from "./FloatingIcons";
+import Footer from "./Footer";
 import bebidasLogo from "@/assets/bebidas-on-logo.png";
 
 const MaintenancePage = () => {
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+    <div className="min-h-screen bg-background relative overflow-hidden flex flex-col">
       {/* Background Animated Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <FloatingIcons />
@@ -22,7 +22,7 @@ const MaintenancePage = () => {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-accent/10 to-transparent rounded-full blur-3xl animate-float" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-4 text-center py-12">
         {/* Logo Section with Intense Animations */}
         <div className="mb-8 animate-fade-in-scale">
           <div className="relative">
@@ -115,29 +115,23 @@ const MaintenancePage = () => {
             </p>
           </Card>
 
-          {/* Contact Button */}
+          {/* Status Message */}
           <div className="pt-8">
-            <Button 
-              variant="secondary"
-              size="lg"
-              className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-primary-foreground font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-              onClick={() => window.open('https://wa.me/5511999999999', '_blank')}
-            >
-              <Smartphone className="w-5 h-5 mr-2" />
-              Entre em Contato
-            </Button>
-          </div>
-
-          {/* Footer */}
-          <div className="pt-12 text-muted-foreground text-sm">
-            <p className="flex items-center justify-center space-x-2">
-              <span>Powered by</span>
-              <span className="text-primary font-semibold">Bebidas ON Delivery</span>
-              <span>🍺</span>
-            </p>
+            <Card className="p-6 bg-card/60 backdrop-blur-md border-primary/20 max-w-lg mx-auto">
+              <div className="text-center">
+                <h4 className="text-lg font-semibold text-card-foreground mb-2">
+                  Aguarde as novidades! 
+                </h4>
+                <p className="text-muted-foreground">
+                  Logo estaremos de volta com um cardápio ainda mais completo e uma experiência de compra aprimorada.
+                </p>
+              </div>
+            </Card>
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

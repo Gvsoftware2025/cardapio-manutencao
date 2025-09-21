@@ -1,8 +1,9 @@
 import React from "react";
-import { Clock, Wrench, Smartphone, Coffee } from "lucide-react";
+import { Clock, Wrench, Coffee } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import FloatingIcons from "./FloatingIcons";
 import Footer from "./Footer";
+import WhatsAppButton from "./WhatsAppButton";
 import bebidasLogo from "@/assets/bebidas-on-logo.png";
 
 const MaintenancePage = () => {
@@ -20,6 +21,9 @@ const MaintenancePage = () => {
         {/* Gradient Overlays */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl animate-pulse-soft" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-accent/10 to-transparent rounded-full blur-3xl animate-float" />
+        
+        {/* Additional decorative elements */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary/5 via-accent/5 to-primary-glow/5 rounded-full blur-3xl animate-pulse-soft" />
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center flex-1 px-4 text-center py-12">
@@ -87,10 +91,10 @@ const MaintenancePage = () => {
             <Card className="p-6 bg-card/80 backdrop-blur-sm border-border/50 hover:shadow-xl transition-all duration-500 hover:scale-105 group">
               <div className="space-y-4">
                 <div className="w-12 h-12 mx-auto bg-gradient-to-r from-primary-glow to-primary rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
-                  <Smartphone className="w-6 h-6 text-primary-foreground" />
+                  <Coffee className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <h3 className="text-lg font-semibold text-card-foreground">
-                  Nova Interface
+                  Cardápio Renovado
                 </h3>
                 <p className="text-muted-foreground text-sm">
                   Design renovado para uma navegação ainda mais fácil
@@ -115,8 +119,8 @@ const MaintenancePage = () => {
             </p>
           </Card>
 
-          {/* Status Message */}
-          <div className="pt-8">
+          {/* Status Message & WhatsApp Button */}
+          <div className="pt-8 space-y-6">
             <Card className="p-6 bg-card/60 backdrop-blur-md border-primary/20 max-w-lg mx-auto">
               <div className="text-center">
                 <h4 className="text-lg font-semibold text-card-foreground mb-2">
@@ -127,6 +131,14 @@ const MaintenancePage = () => {
                 </p>
               </div>
             </Card>
+
+            {/* WhatsApp Button for Orders */}
+            <div className="text-center">
+              <WhatsAppButton />
+              <p className="text-sm text-muted-foreground mt-2">
+                Mesmo em manutenção, atendemos pelo WhatsApp!
+              </p>
+            </div>
           </div>
         </div>
       </div>

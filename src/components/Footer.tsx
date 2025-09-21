@@ -1,7 +1,7 @@
 import React from "react";
 import { Truck, Clock, CreditCard, Instagram } from "lucide-react";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="bg-card/80 backdrop-blur-md border-t border-border/50 mt-16">
       <div className="max-w-6xl mx-auto px-4 py-8">

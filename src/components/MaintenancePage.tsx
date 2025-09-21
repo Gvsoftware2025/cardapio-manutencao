@@ -108,14 +108,14 @@ const MaintenancePage = () => {
             <div className="flex items-center justify-center space-x-3 mb-4">
               <Clock className="w-6 h-6 text-primary animate-pulse-soft" />
               <h3 className="text-xl font-semibold text-card-foreground">
-                Previsão de Retorno
+                Em Manutenção
               </h3>
             </div>
             <p className="text-2xl font-bold text-primary mb-2">
-              Muito Em Breve!
+              Voltamos Já!
             </p>
             <p className="text-muted-foreground text-sm">
-              Nossa equipe está trabalhando 24h para finalizar as melhorias
+              Estamos fazendo melhorias para oferecer uma experiência ainda melhor!
             </p>
           </Card>
 

@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -80,10 +81,41 @@ export default {
             height: "0",
           },
         },
+        "logo-breathing": {
+          "0%, 100%": {
+            filter: "brightness(0.8) saturate(0.9) contrast(0.9)",
+            transform: "scale(1)",
+          },
+          "50%": {
+            filter: "brightness(1.4) saturate(1.6) contrast(1.3)",
+            transform: "scale(1.05)",
+          },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        "pulse-soft": {
+          "0%, 100%": { opacity: "0.6" },
+          "50%": { opacity: "1" },
+        },
+        "slide-in-up": {
+          from: { transform: "translateY(100px)", opacity: "0" },
+          to: { transform: "translateY(0)", opacity: "1" },
+        },
+        "fade-in-scale": {
+          from: { transform: "scale(0.8)", opacity: "0" },
+          to: { transform: "scale(1)", opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "logo-breathing": "logo-breathing 3s ease-in-out infinite",
+        "float": "float 6s ease-in-out infinite",
+        "pulse-soft": "pulse-soft 2s ease-in-out infinite",
+        "slide-in-up": "slide-in-up 0.6s ease-out",
+        "fade-in-scale": "fade-in-scale 0.8s ease-out",
       },
     },
   },
